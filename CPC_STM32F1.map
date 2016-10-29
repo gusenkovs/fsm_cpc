@@ -1,0 +1,351 @@
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 ./Debug/main.c.o
+ .bss           0x0000000000000000        0x0 ./Debug/main.c.o
+ .bss           0x0000000000000000        0x0 ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+ .text          0x0000000000000000       0x14 ./Debug/sturtup.s.o
+ .data          0x0000000000000000        0x0 ./Debug/sturtup.s.o
+ .bss           0x0000000000000000        0x0 ./Debug/sturtup.s.o
+ .data          0x0000000000000000        0x0 ./Debug/stm32f10x_it.c.o
+ .bss           0x0000000000000000        0x0 ./Debug/stm32f10x_it.c.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x0000000020000000 0x0000000000005000 xrw
+FLASH            0x0000000008000000 0x0000000000020000 xr
+BATTRAM          0x0000000040024000 0x0000000000000000 rw
+CCRAM            0x0000000010000000 0x0000000000000000 rw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ./Debug/main.c.o
+LOAD ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+LOAD ./Debug/sturtup.s.o
+LOAD ./Debug/stm32f10x_it.c.o
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libstdc++.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libm.a
+START GROUP
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/libgcc.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libg.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libc.a
+END GROUP
+                0x0000000000000100                STACK_SIZE = 0x100
+                0x0000000000000100                HEAP_SIZE = 0x100
+                0x0000000020004ff8                PROVIDE (_estack, ALIGN (((ORIGIN (RAM) + LENGTH (RAM)) - 0x8), 0x8))
+
+.isr_vector     0x0000000008000000      0x10c
+                0x0000000008000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x0000000008000000      0x10c ./Debug/sturtup.s.o
+                0x0000000008000000                g_pfnVectors
+                0x000000000800010c                . = ALIGN (0x4)
+
+.text           0x000000000800010c      0x578
+                0x000000000800010c                __preinit_array_start = .
+ *(.preinit_array*)
+                0x000000000800010c                __preinit_array_end = .
+                0x000000000800010c                __ctors_start__ = .
+                0x000000000800010c                __init_array_start = .
+ SORT(*)(.init_array)
+                0x000000000800010c                __ctors_end__ = .
+                0x000000000800010c                __init_array_end = .
+                0x000000000800010c                __dtors_start__ = .
+                0x000000000800010c                __dtors_end__ = .
+                0x000000000800010c                . = ALIGN (0x4)
+ *(.text)
+ .text          0x000000000800010c      0x268 ./Debug/main.c.o
+                0x000000000800013c                main
+                0x000000000800032c                Delay
+ .text          0x0000000008000374      0x24c ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+                0x0000000008000374                SystemInit
+                0x00000000080003dc                SystemCoreClockUpdate
+ .text          0x00000000080005c0       0x7c ./Debug/stm32f10x_it.c.o
+                0x00000000080005c0                NMI_Handler
+                0x00000000080005cc                HardFault_Handler
+                0x00000000080005d4                MemManage_Handler
+                0x00000000080005dc                BusFault_Handler
+                0x00000000080005e4                UsageFault_Handler
+                0x00000000080005ec                SVC_Handler
+                0x00000000080005f8                DebugMon_Handler
+                0x0000000008000604                PendSV_Handler
+                0x0000000008000610                SysTick_Handler
+                0x000000000800061c                TIM4_IRQHandler
+ *(.text.*)
+ .text.Reset_Handler
+                0x000000000800063c       0x44 ./Debug/sturtup.s.o
+                0x000000000800063c                Reset_Handler
+ .text.Default_Handler
+                0x0000000008000680        0x2 ./Debug/sturtup.s.o
+                0x0000000008000680                EXTI2_IRQHandler
+                0x0000000008000680                TIM1_CC_IRQHandler
+                0x0000000008000680                PVD_IRQHandler
+                0x0000000008000680                EXTI3_IRQHandler
+                0x0000000008000680                EXTI0_IRQHandler
+                0x0000000008000680                I2C2_EV_IRQHandler
+                0x0000000008000680                ADC1_2_IRQHandler
+                0x0000000008000680                SPI1_IRQHandler
+                0x0000000008000680                TAMPER_IRQHandler
+                0x0000000008000680                DMA1_Channel4_IRQHandler
+                0x0000000008000680                USART3_IRQHandler
+                0x0000000008000680                RTC_IRQHandler
+                0x0000000008000680                DMA1_Channel7_IRQHandler
+                0x0000000008000680                CAN1_RX1_IRQHandler
+                0x0000000008000680                I2C1_EV_IRQHandler
+                0x0000000008000680                DMA1_Channel6_IRQHandler
+                0x0000000008000680                TIM3_IRQHandler
+                0x0000000008000680                RCC_IRQHandler
+                0x0000000008000680                TIM1_TRG_COM_IRQHandler
+                0x0000000008000680                DMA1_Channel1_IRQHandler
+                0x0000000008000680                Default_Handler
+                0x0000000008000680                EXTI15_10_IRQHandler
+                0x0000000008000680                EXTI9_5_IRQHandler
+                0x0000000008000680                SPI2_IRQHandler
+                0x0000000008000680                DMA1_Channel5_IRQHandler
+                0x0000000008000680                EXTI4_IRQHandler
+                0x0000000008000680                USB_LP_CAN1_RX0_IRQHandler
+                0x0000000008000680                USB_HP_CAN1_TX_IRQHandler
+                0x0000000008000680                DMA1_Channel3_IRQHandler
+                0x0000000008000680                TIM1_UP_IRQHandler
+                0x0000000008000680                WWDG_IRQHandler
+                0x0000000008000680                TIM2_IRQHandler
+                0x0000000008000680                TIM1_BRK_IRQHandler
+                0x0000000008000680                EXTI1_IRQHandler
+                0x0000000008000680                RTCAlarm_IRQHandler
+                0x0000000008000680                USART2_IRQHandler
+                0x0000000008000680                I2C2_ER_IRQHandler
+                0x0000000008000680                DMA1_Channel2_IRQHandler
+                0x0000000008000680                CAN1_SCE_IRQHandler
+                0x0000000008000680                FLASH_IRQHandler
+                0x0000000008000680                USART1_IRQHandler
+                0x0000000008000680                I2C1_ER_IRQHandler
+                0x0000000008000680                USBWakeUp_IRQHandler
+ *(.rodata)
+ *(.rodata.*)
+ *(.eh_frame_hdr)
+ *(.eh_frame)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000000008000684                . = ALIGN (0x4)
+ *fill*         0x0000000008000682        0x2 
+                0x0000000008000684                __exidx_start = .
+
+.glue_7         0x0000000008000684        0x0
+ .glue_7        0x0000000008000684        0x0 linker stubs
+
+.glue_7t        0x0000000008000684        0x0
+ .glue_7t       0x0000000008000684        0x0 linker stubs
+
+.vfp11_veneer   0x0000000008000684        0x0
+ .vfp11_veneer  0x0000000008000684        0x0 linker stubs
+
+.v4_bx          0x0000000008000684        0x0
+ .v4_bx         0x0000000008000684        0x0 linker stubs
+
+.iplt           0x0000000008000684        0x0
+ .iplt          0x0000000008000684        0x0 ./Debug/main.c.o
+
+.rel.dyn        0x0000000008000684        0x0
+ .rel.iplt      0x0000000008000684        0x0 ./Debug/main.c.o
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x0000000008000684                __exidx_end = .
+                0x0000000008000684                . = ALIGN (0x4)
+                0x0000000008000684                _etext = .
+                0x0000000008000684                _sidata = _etext
+
+.data           0x0000000020000000       0x14 load address 0x0000000008000684
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _sdata = .
+ *(.data)
+ .data          0x0000000020000000       0x14 ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+                0x0000000020000000                SystemCoreClock
+                0x0000000020000004                AHBPrescTable
+ *(.data.*)
+
+.igot.plt       0x0000000020000014        0x0 load address 0x0000000008000698
+ .igot.plt      0x0000000020000014        0x0 ./Debug/main.c.o
+
+.ramfunc        0x0000000020000014        0x0 load address 0x0000000008000698
+                0x0000000020000014                . = ALIGN (0x4)
+ *(.ramfunc)
+ *(.ramfunc.*)
+                0x0000000020000014                . = ALIGN (0x4)
+                0x0000000020000014                _edata = .
+
+.bss            0x0000000020000014        0x0 load address 0x0000000008000698
+                0x0000000020000014                . = ALIGN (0x4)
+                0x0000000020000014                _sbss = .
+ *(.bss)
+ *(.bss.*)
+ *(COMMON)
+                0x0000000020000014                . = ALIGN (0x4)
+                0x0000000020000014                _ebss = .
+
+.noinit         0x0000000020000014        0x0 load address 0x0000000008000698
+                0x0000000020000014                . = ALIGN (0x4)
+                0x0000000020000014                _start_of_noinit = .
+ *(.noinit)
+ *(.noinit.*)
+                0x0000000020000014                . = ALIGN (0x4)
+                0x0000000020000014                _end_of_noinit = .
+                0x0000000020000014                _end = .
+                0x0000000020000014                __end = .
+
+.battram        0x0000000040024000        0x0
+                0x0000000040024000                . = ALIGN (0x4)
+                0x0000000040024000                _start_of_batt_ram = .
+ *(.battram)
+ *(.battram.*)
+                0x0000000040024000                _end_of_batt_ram = .
+
+.ccram          0x0000000010000000        0x0
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _start_of_ccram = .
+ *(.ccram)
+ *(.ccram.*)
+                0x0000000010000000                _end_of_ccram = .
+
+._usr_stack_heap
+                0x0000000020000014      0x200
+                0x0000000020000014                . = ALIGN (0x4)
+                0x0000000020000114                . = (. + STACK_SIZE)
+ *fill*         0x0000000020000014      0x100 
+                0x0000000020000214                . = (. + HEAP_SIZE)
+ *fill*         0x0000000020000114      0x100 
+                0x0000000020000214                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_heap, _ebss)
+                [!provide]                        PROVIDE (_eheap, (_estack - STACK_SIZE))
+
+DISCARD
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x6e
+ *(.comment)
+ .comment       0x0000000000000000       0x6e ./Debug/main.c.o
+                                         0x6f (size before relaxing)
+ .comment       0x000000000000006e       0x6f ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+ .comment       0x000000000000006e       0x6f ./Debug/stm32f10x_it.c.o
+
+.ARM.attributes
+                0x0000000000000000       0x31
+ .ARM.attributes
+                0x0000000000000000       0x33 ./Debug/main.c.o
+ .ARM.attributes
+                0x0000000000000033       0x33 ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+ .ARM.attributes
+                0x0000000000000066       0x21 ./Debug/sturtup.s.o
+ .ARM.attributes
+                0x0000000000000087       0x33 ./Debug/stm32f10x_it.c.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0x88
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x20 ./Debug/main.c.o
+ .debug_aranges
+                0x0000000000000020       0x20 ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+ .debug_aranges
+                0x0000000000000040       0x28 ./Debug/sturtup.s.o
+ .debug_aranges
+                0x0000000000000068       0x20 ./Debug/stm32f10x_it.c.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x1072
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0x835 ./Debug/main.c.o
+ .debug_info    0x0000000000000835      0x44b ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+ .debug_info    0x0000000000000c80       0x76 ./Debug/sturtup.s.o
+ .debug_info    0x0000000000000cf6      0x37c ./Debug/stm32f10x_it.c.o
+
+.debug_abbrev   0x0000000000000000      0x3a4
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x178 ./Debug/main.c.o
+ .debug_abbrev  0x0000000000000178      0x17b ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+ .debug_abbrev  0x00000000000002f3       0x12 ./Debug/sturtup.s.o
+ .debug_abbrev  0x0000000000000305       0x9f ./Debug/stm32f10x_it.c.o
+
+.debug_line     0x0000000000000000      0x4fb
+ *(.debug_line)
+ .debug_line    0x0000000000000000      0x192 ./Debug/main.c.o
+ .debug_line    0x0000000000000192      0x198 ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+ .debug_line    0x000000000000032a       0x88 ./Debug/sturtup.s.o
+ .debug_line    0x00000000000003b2      0x149 ./Debug/stm32f10x_it.c.o
+
+.debug_frame    0x0000000000000000      0x244
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x7c ./Debug/main.c.o
+ .debug_frame   0x000000000000007c       0x98 ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+ .debug_frame   0x0000000000000114      0x130 ./Debug/stm32f10x_it.c.o
+
+.debug_str      0x0000000000000000      0x84b
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x61e ./Debug/main.c.o
+                                        0x676 (size before relaxing)
+ .debug_str     0x000000000000061e      0x15a ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+                                        0x2fe (size before relaxing)
+ .debug_str     0x0000000000000778       0xd3 ./Debug/stm32f10x_it.c.o
+                                        0x338 (size before relaxing)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+                [!provide]                        PROVIDE (__top_of_stack, _estack)
+                [!provide]                        PROVIDE (__idata_start, _sidata)
+                [!provide]                        PROVIDE (__data_start, _sdata)
+                [!provide]                        PROVIDE (__data_end, _edata)
+                [!provide]                        PROVIDE (__bss_start, _sbss)
+                [!provide]                        PROVIDE (__bss_end, _ebss)
+OUTPUT(./Debug/CPC_STM32F1.elf elf32-littlearm)
+
+.debug_ranges   0x0000000000000000       0x20
+ .debug_ranges  0x0000000000000000       0x20 ./Debug/sturtup.s.o
