@@ -1,4 +1,9 @@
 
+Allocating common symbols
+Common symbol       size              file
+
+dcount              0x4               ./Debug/main.c.o
+
 Discarded input sections
 
  .data          0x0000000000000000        0x0 ./Debug/main.c.o
@@ -43,7 +48,7 @@ END GROUP
                 0x0000000008000000                g_pfnVectors
                 0x000000000800010c                . = ALIGN (0x4)
 
-.text           0x000000000800010c      0x578
+.text           0x000000000800010c      0x49c
                 0x000000000800010c                __preinit_array_start = .
  *(.preinit_array*)
                 0x000000000800010c                __preinit_array_end = .
@@ -56,107 +61,107 @@ END GROUP
                 0x000000000800010c                __dtors_end__ = .
                 0x000000000800010c                . = ALIGN (0x4)
  *(.text)
- .text          0x000000000800010c      0x268 ./Debug/main.c.o
+ .text          0x000000000800010c      0x16c ./Debug/main.c.o
                 0x000000000800013c                main
-                0x000000000800032c                Delay
- .text          0x0000000008000374      0x24c ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
-                0x0000000008000374                SystemInit
-                0x00000000080003dc                SystemCoreClockUpdate
- .text          0x00000000080005c0       0x7c ./Debug/stm32f10x_it.c.o
-                0x00000000080005c0                NMI_Handler
-                0x00000000080005cc                HardFault_Handler
-                0x00000000080005d4                MemManage_Handler
-                0x00000000080005dc                BusFault_Handler
-                0x00000000080005e4                UsageFault_Handler
-                0x00000000080005ec                SVC_Handler
-                0x00000000080005f8                DebugMon_Handler
-                0x0000000008000604                PendSV_Handler
-                0x0000000008000610                SysTick_Handler
-                0x000000000800061c                TIM4_IRQHandler
+                0x0000000008000250                Delay
+ .text          0x0000000008000278      0x254 ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+                0x0000000008000278                SystemInit
+                0x00000000080002e0                SystemCoreClockUpdate
+ .text          0x00000000080004cc       0x94 ./Debug/stm32f10x_it.c.o
+                0x00000000080004cc                NMI_Handler
+                0x00000000080004d8                HardFault_Handler
+                0x00000000080004e0                MemManage_Handler
+                0x00000000080004e8                BusFault_Handler
+                0x00000000080004f0                UsageFault_Handler
+                0x00000000080004f8                SVC_Handler
+                0x0000000008000504                DebugMon_Handler
+                0x0000000008000510                PendSV_Handler
+                0x000000000800051c                SysTick_Handler
+                0x0000000008000528                TIM4_IRQHandler
  *(.text.*)
  .text.Reset_Handler
-                0x000000000800063c       0x44 ./Debug/sturtup.s.o
-                0x000000000800063c                Reset_Handler
+                0x0000000008000560       0x44 ./Debug/sturtup.s.o
+                0x0000000008000560                Reset_Handler
  .text.Default_Handler
-                0x0000000008000680        0x2 ./Debug/sturtup.s.o
-                0x0000000008000680                EXTI2_IRQHandler
-                0x0000000008000680                TIM1_CC_IRQHandler
-                0x0000000008000680                PVD_IRQHandler
-                0x0000000008000680                EXTI3_IRQHandler
-                0x0000000008000680                EXTI0_IRQHandler
-                0x0000000008000680                I2C2_EV_IRQHandler
-                0x0000000008000680                ADC1_2_IRQHandler
-                0x0000000008000680                SPI1_IRQHandler
-                0x0000000008000680                TAMPER_IRQHandler
-                0x0000000008000680                DMA1_Channel4_IRQHandler
-                0x0000000008000680                USART3_IRQHandler
-                0x0000000008000680                RTC_IRQHandler
-                0x0000000008000680                DMA1_Channel7_IRQHandler
-                0x0000000008000680                CAN1_RX1_IRQHandler
-                0x0000000008000680                I2C1_EV_IRQHandler
-                0x0000000008000680                DMA1_Channel6_IRQHandler
-                0x0000000008000680                TIM3_IRQHandler
-                0x0000000008000680                RCC_IRQHandler
-                0x0000000008000680                TIM1_TRG_COM_IRQHandler
-                0x0000000008000680                DMA1_Channel1_IRQHandler
-                0x0000000008000680                Default_Handler
-                0x0000000008000680                EXTI15_10_IRQHandler
-                0x0000000008000680                EXTI9_5_IRQHandler
-                0x0000000008000680                SPI2_IRQHandler
-                0x0000000008000680                DMA1_Channel5_IRQHandler
-                0x0000000008000680                EXTI4_IRQHandler
-                0x0000000008000680                USB_LP_CAN1_RX0_IRQHandler
-                0x0000000008000680                USB_HP_CAN1_TX_IRQHandler
-                0x0000000008000680                DMA1_Channel3_IRQHandler
-                0x0000000008000680                TIM1_UP_IRQHandler
-                0x0000000008000680                WWDG_IRQHandler
-                0x0000000008000680                TIM2_IRQHandler
-                0x0000000008000680                TIM1_BRK_IRQHandler
-                0x0000000008000680                EXTI1_IRQHandler
-                0x0000000008000680                RTCAlarm_IRQHandler
-                0x0000000008000680                USART2_IRQHandler
-                0x0000000008000680                I2C2_ER_IRQHandler
-                0x0000000008000680                DMA1_Channel2_IRQHandler
-                0x0000000008000680                CAN1_SCE_IRQHandler
-                0x0000000008000680                FLASH_IRQHandler
-                0x0000000008000680                USART1_IRQHandler
-                0x0000000008000680                I2C1_ER_IRQHandler
-                0x0000000008000680                USBWakeUp_IRQHandler
+                0x00000000080005a4        0x2 ./Debug/sturtup.s.o
+                0x00000000080005a4                EXTI2_IRQHandler
+                0x00000000080005a4                TIM1_CC_IRQHandler
+                0x00000000080005a4                PVD_IRQHandler
+                0x00000000080005a4                EXTI3_IRQHandler
+                0x00000000080005a4                EXTI0_IRQHandler
+                0x00000000080005a4                I2C2_EV_IRQHandler
+                0x00000000080005a4                ADC1_2_IRQHandler
+                0x00000000080005a4                SPI1_IRQHandler
+                0x00000000080005a4                TAMPER_IRQHandler
+                0x00000000080005a4                DMA1_Channel4_IRQHandler
+                0x00000000080005a4                USART3_IRQHandler
+                0x00000000080005a4                RTC_IRQHandler
+                0x00000000080005a4                DMA1_Channel7_IRQHandler
+                0x00000000080005a4                CAN1_RX1_IRQHandler
+                0x00000000080005a4                I2C1_EV_IRQHandler
+                0x00000000080005a4                DMA1_Channel6_IRQHandler
+                0x00000000080005a4                TIM3_IRQHandler
+                0x00000000080005a4                RCC_IRQHandler
+                0x00000000080005a4                TIM1_TRG_COM_IRQHandler
+                0x00000000080005a4                DMA1_Channel1_IRQHandler
+                0x00000000080005a4                Default_Handler
+                0x00000000080005a4                EXTI15_10_IRQHandler
+                0x00000000080005a4                EXTI9_5_IRQHandler
+                0x00000000080005a4                SPI2_IRQHandler
+                0x00000000080005a4                DMA1_Channel5_IRQHandler
+                0x00000000080005a4                EXTI4_IRQHandler
+                0x00000000080005a4                USB_LP_CAN1_RX0_IRQHandler
+                0x00000000080005a4                USB_HP_CAN1_TX_IRQHandler
+                0x00000000080005a4                DMA1_Channel3_IRQHandler
+                0x00000000080005a4                TIM1_UP_IRQHandler
+                0x00000000080005a4                WWDG_IRQHandler
+                0x00000000080005a4                TIM2_IRQHandler
+                0x00000000080005a4                TIM1_BRK_IRQHandler
+                0x00000000080005a4                EXTI1_IRQHandler
+                0x00000000080005a4                RTCAlarm_IRQHandler
+                0x00000000080005a4                USART2_IRQHandler
+                0x00000000080005a4                I2C2_ER_IRQHandler
+                0x00000000080005a4                DMA1_Channel2_IRQHandler
+                0x00000000080005a4                CAN1_SCE_IRQHandler
+                0x00000000080005a4                FLASH_IRQHandler
+                0x00000000080005a4                USART1_IRQHandler
+                0x00000000080005a4                I2C1_ER_IRQHandler
+                0x00000000080005a4                USBWakeUp_IRQHandler
  *(.rodata)
  *(.rodata.*)
  *(.eh_frame_hdr)
  *(.eh_frame)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008000684                . = ALIGN (0x4)
- *fill*         0x0000000008000682        0x2 
-                0x0000000008000684                __exidx_start = .
+                0x00000000080005a8                . = ALIGN (0x4)
+ *fill*         0x00000000080005a6        0x2 
+                0x00000000080005a8                __exidx_start = .
 
-.glue_7         0x0000000008000684        0x0
- .glue_7        0x0000000008000684        0x0 linker stubs
+.glue_7         0x00000000080005a8        0x0
+ .glue_7        0x00000000080005a8        0x0 linker stubs
 
-.glue_7t        0x0000000008000684        0x0
- .glue_7t       0x0000000008000684        0x0 linker stubs
+.glue_7t        0x00000000080005a8        0x0
+ .glue_7t       0x00000000080005a8        0x0 linker stubs
 
-.vfp11_veneer   0x0000000008000684        0x0
- .vfp11_veneer  0x0000000008000684        0x0 linker stubs
+.vfp11_veneer   0x00000000080005a8        0x0
+ .vfp11_veneer  0x00000000080005a8        0x0 linker stubs
 
-.v4_bx          0x0000000008000684        0x0
- .v4_bx         0x0000000008000684        0x0 linker stubs
+.v4_bx          0x00000000080005a8        0x0
+ .v4_bx         0x00000000080005a8        0x0 linker stubs
 
-.iplt           0x0000000008000684        0x0
- .iplt          0x0000000008000684        0x0 ./Debug/main.c.o
+.iplt           0x00000000080005a8        0x0
+ .iplt          0x00000000080005a8        0x0 ./Debug/main.c.o
 
-.rel.dyn        0x0000000008000684        0x0
- .rel.iplt      0x0000000008000684        0x0 ./Debug/main.c.o
+.rel.dyn        0x00000000080005a8        0x0
+ .rel.iplt      0x00000000080005a8        0x0 ./Debug/main.c.o
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000008000684                __exidx_end = .
-                0x0000000008000684                . = ALIGN (0x4)
-                0x0000000008000684                _etext = .
-                0x0000000008000684                _sidata = _etext
+                0x00000000080005a8                __exidx_end = .
+                0x00000000080005a8                . = ALIGN (0x4)
+                0x00000000080005a8                _etext = .
+                0x00000000080005a8                _sidata = _etext
 
-.data           0x0000000020000000       0x14 load address 0x0000000008000684
+.data           0x0000000020000000       0x14 load address 0x00000000080005a8
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -165,34 +170,36 @@ END GROUP
                 0x0000000020000004                AHBPrescTable
  *(.data.*)
 
-.igot.plt       0x0000000020000014        0x0 load address 0x0000000008000698
+.igot.plt       0x0000000020000014        0x0 load address 0x00000000080005bc
  .igot.plt      0x0000000020000014        0x0 ./Debug/main.c.o
 
-.ramfunc        0x0000000020000014        0x0 load address 0x0000000008000698
+.ramfunc        0x0000000020000014        0x0 load address 0x00000000080005bc
                 0x0000000020000014                . = ALIGN (0x4)
  *(.ramfunc)
  *(.ramfunc.*)
                 0x0000000020000014                . = ALIGN (0x4)
                 0x0000000020000014                _edata = .
 
-.bss            0x0000000020000014        0x0 load address 0x0000000008000698
+.bss            0x0000000020000014        0x4 load address 0x00000000080005bc
                 0x0000000020000014                . = ALIGN (0x4)
                 0x0000000020000014                _sbss = .
  *(.bss)
  *(.bss.*)
  *(COMMON)
-                0x0000000020000014                . = ALIGN (0x4)
-                0x0000000020000014                _ebss = .
+ COMMON         0x0000000020000014        0x4 ./Debug/main.c.o
+                0x0000000020000014                dcount
+                0x0000000020000018                . = ALIGN (0x4)
+                0x0000000020000018                _ebss = .
 
-.noinit         0x0000000020000014        0x0 load address 0x0000000008000698
-                0x0000000020000014                . = ALIGN (0x4)
-                0x0000000020000014                _start_of_noinit = .
+.noinit         0x0000000020000018        0x0 load address 0x00000000080005bc
+                0x0000000020000018                . = ALIGN (0x4)
+                0x0000000020000018                _start_of_noinit = .
  *(.noinit)
  *(.noinit.*)
-                0x0000000020000014                . = ALIGN (0x4)
-                0x0000000020000014                _end_of_noinit = .
-                0x0000000020000014                _end = .
-                0x0000000020000014                __end = .
+                0x0000000020000018                . = ALIGN (0x4)
+                0x0000000020000018                _end_of_noinit = .
+                0x0000000020000018                _end = .
+                0x0000000020000018                __end = .
 
 .battram        0x0000000040024000        0x0
                 0x0000000040024000                . = ALIGN (0x4)
@@ -209,13 +216,13 @@ END GROUP
                 0x0000000010000000                _end_of_ccram = .
 
 ._usr_stack_heap
-                0x0000000020000014      0x200
-                0x0000000020000014                . = ALIGN (0x4)
-                0x0000000020000114                . = (. + STACK_SIZE)
- *fill*         0x0000000020000014      0x100 
-                0x0000000020000214                . = (. + HEAP_SIZE)
- *fill*         0x0000000020000114      0x100 
-                0x0000000020000214                . = ALIGN (0x4)
+                0x0000000020000018      0x200
+                0x0000000020000018                . = ALIGN (0x4)
+                0x0000000020000118                . = (. + STACK_SIZE)
+ *fill*         0x0000000020000018      0x100 
+                0x0000000020000218                . = (. + HEAP_SIZE)
+ *fill*         0x0000000020000118      0x100 
+                0x0000000020000218                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_heap, _ebss)
                 [!provide]                        PROVIDE (_eheap, (_estack - STACK_SIZE))
 
@@ -286,26 +293,26 @@ DISCARD
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x1072
+.debug_info     0x0000000000000000     0x1006
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x0000000000000000      0x835 ./Debug/main.c.o
- .debug_info    0x0000000000000835      0x44b ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
- .debug_info    0x0000000000000c80       0x76 ./Debug/sturtup.s.o
- .debug_info    0x0000000000000cf6      0x37c ./Debug/stm32f10x_it.c.o
+ .debug_info    0x0000000000000000      0x7b9 ./Debug/main.c.o
+ .debug_info    0x00000000000007b9      0x44b ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+ .debug_info    0x0000000000000c04       0x76 ./Debug/sturtup.s.o
+ .debug_info    0x0000000000000c7a      0x38c ./Debug/stm32f10x_it.c.o
 
-.debug_abbrev   0x0000000000000000      0x3a4
+.debug_abbrev   0x0000000000000000      0x3b7
  *(.debug_abbrev)
- .debug_abbrev  0x0000000000000000      0x178 ./Debug/main.c.o
- .debug_abbrev  0x0000000000000178      0x17b ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
- .debug_abbrev  0x00000000000002f3       0x12 ./Debug/sturtup.s.o
- .debug_abbrev  0x0000000000000305       0x9f ./Debug/stm32f10x_it.c.o
+ .debug_abbrev  0x0000000000000000      0x17a ./Debug/main.c.o
+ .debug_abbrev  0x000000000000017a      0x17b ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+ .debug_abbrev  0x00000000000002f5       0x12 ./Debug/sturtup.s.o
+ .debug_abbrev  0x0000000000000307       0xb0 ./Debug/stm32f10x_it.c.o
 
-.debug_line     0x0000000000000000      0x4fb
+.debug_line     0x0000000000000000      0x4ca
  *(.debug_line)
- .debug_line    0x0000000000000000      0x192 ./Debug/main.c.o
- .debug_line    0x0000000000000192      0x198 ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
- .debug_line    0x000000000000032a       0x88 ./Debug/sturtup.s.o
- .debug_line    0x00000000000003b2      0x149 ./Debug/stm32f10x_it.c.o
+ .debug_line    0x0000000000000000      0x158 ./Debug/main.c.o
+ .debug_line    0x0000000000000158      0x199 ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+ .debug_line    0x00000000000002f1       0x88 ./Debug/sturtup.s.o
+ .debug_line    0x0000000000000379      0x151 ./Debug/stm32f10x_it.c.o
 
 .debug_frame    0x0000000000000000      0x244
  *(.debug_frame)
@@ -313,14 +320,14 @@ DISCARD
  .debug_frame   0x000000000000007c       0x98 ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
  .debug_frame   0x0000000000000114      0x130 ./Debug/stm32f10x_it.c.o
 
-.debug_str      0x0000000000000000      0x84b
+.debug_str      0x0000000000000000      0x81e
  *(.debug_str)
- .debug_str     0x0000000000000000      0x61e ./Debug/main.c.o
-                                        0x676 (size before relaxing)
- .debug_str     0x000000000000061e      0x15a ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
+ .debug_str     0x0000000000000000      0x5f1 ./Debug/main.c.o
+                                        0x649 (size before relaxing)
+ .debug_str     0x00000000000005f1      0x15a ./Debug/CMSIS_CM3_DeviceSupport_ST_STM32F10x_system_stm32f10x.c.o
                                         0x2fe (size before relaxing)
- .debug_str     0x0000000000000778       0xd3 ./Debug/stm32f10x_it.c.o
-                                        0x338 (size before relaxing)
+ .debug_str     0x000000000000074b       0xd3 ./Debug/stm32f10x_it.c.o
+                                        0x33f (size before relaxing)
 
 .debug_loc
  *(.debug_loc)

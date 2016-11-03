@@ -25,6 +25,7 @@
 #include "stm32f10x_it.h"
 #include "stm32f1_timer.h"
 
+extern volatile uint32_t dcount;
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
   */
@@ -141,4 +142,5 @@ void SysTick_Handler(void)
 void TIM4_IRQHandler(void)
 {
 TIMER_IRQ_Reset(TIM4); //Сбрасываем флаг UIF
+if(dcount) dcount--;
 }

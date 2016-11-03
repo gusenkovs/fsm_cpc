@@ -24,6 +24,13 @@
 //#define  RCC_APB1ENR_BKPEN    /*!< Backup interface clock enable */
 //#define  RCC_APB1ENR_PWREN    /*!< Power interface clock enable */
 
+//** UART **//
+//#define  RCC_APB2ENR_USART1EN
+//#define  RCC_APB1ENR_USART2EN
+//#define  RCC_APB1ENR_USART3EN
+//#define  RCC_APB1ENR_UART4EN     
+//#define  RCC_APB1ENR_UART5EN  
+ 
 #define RCC_AHB_Init(Periph) RCC->AHBENR |= Periph
 #define RCC_APB1_Init(Periph) RCC->APB1ENR |= Periph
 #define RCC_APB2_Init(Periph) RCC->APB2ENR |= Periph

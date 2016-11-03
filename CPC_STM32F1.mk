@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=gusenkovs
-Date                   :=29.10.2016
+Date                   :=03.11.2016
 CodeLitePath           :=/home/gusenkovs/.codelite
 LinkerName             :=/usr/bin/arm-none-eabi-g++
 SharedObjectLinkerName :=/usr/bin/arm-none-eabi-g++ -shared -fPIC
@@ -83,6 +83,8 @@ PostBuild:
 	arm-none-eabi-size Debug/CPC_STM32F1.elf
 	arm-none-eabi-objcopy -Obinary Debug/CPC_STM32F1.elf Debug/CPC_STM32F1.bin
 	arm-none-eabi-objcopy -Oihex Debug/CPC_STM32F1.elf Debug/CPC_STM32F1.hex
+	xfce4-terminal -e "killall -9 openocd"
+	xfce4-terminal -e openocd --working-directory="/home/gusenkovs/stm32hc/CPC_STM32F1/"
 	@echo Done
 
 MakeIntermediateDirs:
@@ -93,6 +95,9 @@ $(IntermediateDirectory)/.d:
 	@test -d ./Debug || $(MakeDirCommand) ./Debug
 
 PreBuild:
+	@echo Executing Pre Build commands ...
+	
+	@echo Done
 
 
 ##
